@@ -35,7 +35,7 @@ def convert_tree(rulename,estimator,feature_names,malware_threshold=0.5):
         node_depth[node_id] = parent_depth + 1
 
         # If we have a test node
-        if (children_left[node_id] != children_right[node_id]):
+        if children_left[node_id] != children_right[node_id]:
             stack.append((children_left[node_id], parent_depth + 1))
             stack.append((children_right[node_id], parent_depth + 1))
         else:
